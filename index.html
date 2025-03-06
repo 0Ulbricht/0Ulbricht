@@ -11,9 +11,23 @@
             background-color: #111;
             color: white;
             padding: 20px;
+            margin: 0;
+            overflow-x: hidden;
         }
         h1 {
             color: #FFD700;
+            font-size: 50px;
+            animation: fadeIn 2s ease-out;
+        }
+        h2 {
+            font-size: 30px;
+            color: #ff6347;
+            margin-top: 20px;
+            animation: fadeIn 3s ease-out;
+        }
+        p {
+            font-size: 20px;
+            animation: fadeIn 4s ease-out;
         }
         .btn {
             display: inline-block;
@@ -24,9 +38,52 @@
             background-color: #ff4500;
             text-decoration: none;
             border-radius: 5px;
+            transition: transform 0.2s ease-in-out;
         }
         .btn:hover {
             background-color: #ff6347;
+            transform: scale(1.1);
+        }
+        .btn:active {
+            transform: scale(0.9);
+        }
+        img {
+            width: 200px;
+            border-radius: 10px;
+            margin-top: 20px;
+            animation: slideIn 2s ease-out;
+        }
+
+        /* Animation for text and image */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Background animation for crypto vibes */
+        @keyframes moveBackground {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
+        }
+
+        body {
+            background: linear-gradient(45deg, #111, #333);
+            background-size: 200% 200%;
+            animation: moveBackground 10s linear infinite;
         }
     </style>
 </head>
@@ -35,12 +92,14 @@
     <h1>🚀 0Ulbricht - The Freedom Memecoin 🚀</h1>
     <p>The token of resistance, inspired by Ross Ulbricht and supported by the community.</p>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Ross_Ulbricht.png" width="200" alt="Ross Ulbricht">
+    <img src="https://img.lemde.fr/2015/01/30/94/0/1107/551/700/0/75/0/ill_4567079_3613_ulbricht.png" alt="Ross Ulbricht">
 
     <h2>🔥 Join the Revolution! 🔥</h2>
     <p>Help free Ross Ulbricht and support a decentralized future.</p>
 
-    <a href="#" class="btn">Buy 0Ulbricht</a>
+    <!-- Redirection link to the buy page -->
+    <a href="https://x.com/DICAVZI" class="btn" target="_blank">Buy 0Ulbricht</a>
 
 </body>
 </html>
+
